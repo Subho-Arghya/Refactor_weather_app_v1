@@ -1,0 +1,270 @@
+/**
+Header Styles
+*/
+
+.header-wrapper {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px 10px;
+    margin-left: 150px;
+    min-height: 65px;
+}
+
+.header-wrapper .button {
+  padding: 6px 12px;
+    font-size: 1.1rem;
+    background-color: #853985;
+    color: #ddd;
+}
+
+/**
+Sidebar Styles
+*/
+
+.sidebar-container {
+  width: 150px;
+  height: 100vh;
+  background-color: #853985;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.sidebar-container .inactive-button {
+  height: 75px;
+  color: #c5b6c5;
+  background-color: rgb(168, 42, 151);
+  border: 0;
+  width: 100%;
+}
+  
+
+
+.sidebar-container .active-button {
+  height: 75px;
+  color: #853985;
+  background-color: palegoldenrod;
+  border: 0;
+  width: 100%;
+}
+
+/**
+City Page Styles
+*/
+
+.city-container {
+  width: calc(100vw - 250px);
+  display: flex;
+  gap: 30px;
+  padding: 20px 20px;
+}
+
+.city-container .city-selection {
+  width: 30%;
+  height: 75vh;
+  background-color: rgb(203, 231, 231);
+  border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.city-container .city-selection .city-selection-header {
+  display: flex;
+  justify-content: space-between;
+  height: 10%;
+  background-color: #f9ecdf;
+  border-bottom: 1px solid grey;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.city-container .city-selection .city-selection-body {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;  
+}
+.city-container .city-selection .city-selection-body::-webkit-scrollbar {
+  display: none;
+}
+
+.city-container .city-selection .city-selection-body .selected-city {
+  padding: 4px;
+  border: 1px solid #444;
+}
+
+.city-container .city-description {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9ecdf;
+  border: 1px solid #666;
+}
+
+.city-container .city-description .city-description-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 10%;
+  border-bottom: 2px solid #111;
+}
+
+.city-container .city-description .city-description-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 85%;
+}
+
+.city-container .city-description .city-description-body .city-desc-content-inner #description {
+  color: green;
+  font-style: italic;
+}
+
+.city-container .city-description .city-description-body .city-desc-content-inner .inner-det span {
+  font-weight: bold;
+}
+
+/**
+Modal Styles
+*/
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0009;
+  height: 100%;
+  width: 100%;
+  z-index: 10;  
+}
+
+.modal-display {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  width: 40%;
+  min-width: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.modal-display .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+  background-color: rgb(201, 201, 56);
+  height: 15%;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.modal-display .modal-header .close-button {
+  font-size: 1.5em;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.modal-display .modal-input {
+  background-color: #ddd;   
+  text-align: center;
+  padding: 15px;
+
+}
+
+.modal-display .modal-input input {
+  width: 75%;
+  padding: 10px;
+  border: 1px solid lightblue;
+}
+
+.modal-display .modal-input input:hover {
+  border: 1px solid rgb(76, 118, 197);
+  outline: none;
+}
+
+
+.modal-display .modal-cities-section {
+  height: 75%;
+    background-color: blanchedalmond;
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 10px 40px;
+    text-align: center;    
+}
+
+.modal-display .modal-cities-section::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-display .modal-cities-section .single-city {
+  padding: 5px 20px;
+  border: 1px solid grey;
+  background-color: #b1c192;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-overlay .bg-clicker {
+  z-index: 999;
+  height: 100%;
+  width:100%;
+  top: 0;
+  left: 0;
+  background-color: #0009;
+}
+
+/**
+Home Page Styles
+*/
+
+.home-container {
+  width: calc(100vw - 250px);
+  display: flex;
+  gap: 30px;
+  padding: 20px 20px;
+  flex-wrap: wrap
+}
+
+.home-container .single-fav-city {
+  width: 30%;
+  min-width: 200px;  
+  border: 1px solid grey;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+
+.home-container .single-fav-city .single-fav-city-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-container .single-fav-city .single-fav-city-desc {
+  color: green;
+  font-style: italic;
+}
+
+.home-container .single-fav-city .single-fav-city-details span {
+  font-weight: bold;
+
+}
